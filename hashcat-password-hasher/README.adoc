@@ -1,0 +1,27 @@
+A Java application that generates passwords in format `sha256($salt.$pass):$salt` (i.e. mode 1420) for https://hashcat.net/wiki/doku.php?id=example_hashes[hashcat].
+
+* Passwords are read from src/main/resources/passwords.txt
+* The output is written to passwords-A0.M1420.hash
+
+You can crack the passwords using a dictionary attack by http://hashcat.net/files/hashcat-2.00.7z[Downloading Hashcat].
+
+Ensure it is executable:
+
+[source,bash]
+----
+$ chmod +x hashcat*
+----
+
+Download and extract http://home.btconnect.com/md5decrypter/hashkiller-dict.rar[hashkiller-dict.txt] from https://hashkiller.co.uk/downloads.aspx into this folder.
+
+Then run the following command (Linux):
+
+[source,bash]
+----
+$ ./hashcat-cli64.bin -a 0 -m 1420 passwords-A0.M1420.hash hashkiller-dict.txt
+----
+
+A few notes:
+
+* You may need to change the file extension for your OS.
+* Alternatively, you can also use http://hashcat.net/oclhashcat/[oclhashcat] if your OS/GPU is supported.

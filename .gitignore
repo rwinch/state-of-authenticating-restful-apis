@@ -1,0 +1,14 @@
+build
+.springBeans
+.classpath
+.settings
+.idea
+.project
+bin
+target
+.gradle
+*.ml
+*.ipr
+*.iws
+*.pot
+hashkiller-dict.txt

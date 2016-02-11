@@ -1,0 +1,18 @@
+= About
+
+This repository contains all the material for https://www.devnexus.com/s/devnexus2016/presentations#id-6439[The State of Authenticating RESTful APIs].
+
+== Abstract
+
+The many benefits of a RESTful architecture has made it the standard way in which to design web based APIs. 
+For example, the principles of REST state that we should leverage standard HTTP verbs in order to help keep our APIs simple.
+Server components that are considered RESTFul should be stateless which help to ensure that they can easily scale.
+
+However, the best practices of REST and security often seem to clash.
+How should sensitive information be transmitted in RESTful APIs?
+How should a user be authenticated in a stateless application?
+How is it possible to design an API so it is both secure and RESTful?
+Securing RESTful endpoints is further complicated by the the fact that security best practices evolve so rapidly.
+
+In this talk Rob will explore various ways to perform authentication in RESTful APIs.
+Along the way we will clear up misconceptions, explore common pitfalls, and discover new insights into authentication.
